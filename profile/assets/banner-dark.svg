@@ -1,0 +1,128 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="360" viewBox="0 0 960 360" role="img" aria-label="empty sekai">
+  <defs>
+    <clipPath id="sheet"><rect width="960" height="360" rx="10"/></clipPath>
+    <linearGradient id="paper" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#0F141A"/>
+      <stop offset="1" stop-color="#131A22"/>
+    </linearGradient>
+    <radialGradient id="mist">
+      <stop offset="0" stop-color="#7FA3BD" stop-opacity="0.08"/>
+      <stop offset="1" stop-color="#7FA3BD" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="staff" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="960" y2="0">
+      <stop offset="0.03" stop-color="#97A5B2" stop-opacity="0"/>
+      <stop offset="0.24" stop-color="#97A5B2" stop-opacity="0.4"/>
+      <stop offset="0.66" stop-color="#97A5B2" stop-opacity="0.34"/>
+      <stop offset="0.97" stop-color="#97A5B2" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="vane" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#B9DBF0"/>
+      <stop offset="1" stop-color="#7FB2D2"/>
+    </linearGradient>
+    <radialGradient id="blue" cx="0.47" cy="0.45" r="0.55">
+      <stop offset="0" stop-color="#5F8FB0" stop-opacity="0.34"/>
+      <stop offset="0.6" stop-color="#5F8FB0" stop-opacity="0.5"/>
+      <stop offset="0.9" stop-color="#93C2DE" stop-opacity="0.66"/>
+      <stop offset="1" stop-color="#93C2DE" stop-opacity="0.82"/>
+    </radialGradient>
+    <radialGradient id="rose" cx="0.47" cy="0.45" r="0.55">
+      <stop offset="0" stop-color="#96707E" stop-opacity="0.34"/>
+      <stop offset="0.6" stop-color="#96707E" stop-opacity="0.5"/>
+      <stop offset="0.9" stop-color="#C9A4B1" stop-opacity="0.66"/>
+      <stop offset="1" stop-color="#C9A4B1" stop-opacity="0.82"/>
+    </radialGradient>
+    <filter id="washA" filterUnits="userSpaceOnUse" x="580" y="-60" width="400" height="400" color-interpolation-filters="sRGB">
+      <feTurbulence type="fractalNoise" baseFrequency="0.012" numOctaves="2" seed="4" result="warp"/>
+      <feDisplacementMap in="SourceGraphic" in2="warp" scale="30" xChannelSelector="R" yChannelSelector="G" result="drift"/>
+      <feTurbulence type="fractalNoise" baseFrequency="0.11" numOctaves="2" seed="6" result="fray"/>
+      <feDisplacementMap in="drift" in2="fray" scale="4" xChannelSelector="G" yChannelSelector="R" result="shape"/>
+      <feGaussianBlur in="shape" stdDeviation="0.35" result="edge"/>
+      <feGaussianBlur in="shape" stdDeviation="6" result="spread"/>
+      <feComponentTransfer in="spread" result="bleed"><feFuncA type="linear" slope="0.12"/></feComponentTransfer>
+      <feMerge result="wet"><feMergeNode in="bleed"/><feMergeNode in="edge"/></feMerge>
+      <feTurbulence type="fractalNoise" baseFrequency="0.022" numOctaves="4" seed="9" result="cloud"/>
+      <feColorMatrix in="cloud" type="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0.55 0 0 0 0.66" result="density"/>
+      <feComposite in="wet" in2="density" operator="in" result="pooled"/>
+      <feTurbulence type="fractalNoise" baseFrequency="1.15" numOctaves="2" seed="15" result="tooth"/>
+      <feColorMatrix in="tooth" type="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0.45 0 0 0 0.76" result="granulation"/>
+      <feComposite in="pooled" in2="granulation" operator="in"/>
+    </filter>
+    <filter id="washB" filterUnits="userSpaceOnUse" x="530" y="130" width="220" height="210" color-interpolation-filters="sRGB">
+      <feTurbulence type="fractalNoise" baseFrequency="0.012" numOctaves="2" seed="17" result="warp"/>
+      <feDisplacementMap in="SourceGraphic" in2="warp" scale="30" xChannelSelector="R" yChannelSelector="G" result="drift"/>
+      <feTurbulence type="fractalNoise" baseFrequency="0.11" numOctaves="2" seed="19" result="fray"/>
+      <feDisplacementMap in="drift" in2="fray" scale="4" xChannelSelector="G" yChannelSelector="R" result="shape"/>
+      <feGaussianBlur in="shape" stdDeviation="0.35" result="edge"/>
+      <feGaussianBlur in="shape" stdDeviation="6" result="spread"/>
+      <feComponentTransfer in="spread" result="bleed"><feFuncA type="linear" slope="0.12"/></feComponentTransfer>
+      <feMerge result="wet"><feMergeNode in="bleed"/><feMergeNode in="edge"/></feMerge>
+      <feTurbulence type="fractalNoise" baseFrequency="0.022" numOctaves="4" seed="22" result="cloud"/>
+      <feColorMatrix in="cloud" type="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0.55 0 0 0 0.66" result="density"/>
+      <feComposite in="wet" in2="density" operator="in" result="pooled"/>
+      <feTurbulence type="fractalNoise" baseFrequency="1.15" numOctaves="2" seed="28" result="tooth"/>
+      <feColorMatrix in="tooth" type="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0.45 0 0 0 0.76" result="granulation"/>
+      <feComposite in="pooled" in2="granulation" operator="in"/>
+    </filter>
+    <filter id="grain" filterUnits="userSpaceOnUse" x="0" y="0" width="960" height="360" color-interpolation-filters="sRGB">
+      <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" seed="3"/>
+      <feColorMatrix type="matrix" values="0 0 0 0 0.86  0 0 0 0 0.9  0 0 0 0 0.94  0 0 0 0.06 0"/>
+    </filter>
+    <mask id="vaneShape" maskUnits="userSpaceOnUse" x="-16" y="-48" width="32" height="84">
+      <path d="M4 -44C10 -36 13 -18 11.5 0C10.5 12 5 24 -2.4 31C-9 25 -12.5 12 -11.5 -4C-10.5 -22 -3 -38 4 -44Z" fill="#fff"/>
+      <path d="M12.6 -6L3.2 3M9.8 14L0.2 20.4M11.8 -24L4.8 -17.6M-11.8 -10L2.8 0M-11.4 13.4L0 20.6M-8.4 -27L4.6 -19" stroke="#000" stroke-width="0.7" stroke-linecap="round" fill="none"/>
+    </mask>
+    <filter id="plume" filterUnits="userSpaceOnUse" x="-18" y="-50" width="36" height="104" color-interpolation-filters="sRGB">
+      <feTurbulence type="fractalNoise" baseFrequency="0.7" numOctaves="2" seed="29" result="tooth"/>
+      <feColorMatrix in="tooth" type="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0.6 0 0 0 0.68" result="granulation"/>
+      <feComposite in="SourceGraphic" in2="granulation" operator="in"/>
+    </filter>
+  </defs>
+  <g clip-path="url(#sheet)">
+    <rect width="960" height="360" fill="url(#paper)"/>
+    <ellipse cx="400" cy="306" rx="560" ry="80" fill="url(#mist)"/>
+
+    <g style="mix-blend-mode:screen" opacity="0.84">
+      <g filter="url(#washA)">
+        <path d="M970.72 138.25C964.18 165.04 950.12 188.79 927 209.82C903.88 230.84 867.62 261.38 831.97 264.41C796.32 267.44 741.88 241.24 713.1 227.99C684.33 214.74 671.78 204.8 659.33 184.91C646.87 165.02 636.78 140.52 638.37 108.66C639.96 76.79 657.32 21.02 668.84 -6.26C680.37 -33.54 683.76 -43.41 707.52 -55.03C731.28 -66.66 774.48 -83.27 811.39 -76.01C848.31 -68.75 903.21 -32.32 929.02 -11.47C954.83 9.37 959.29 24.09 966.24 49.04C973.19 74 977.26 111.45 970.72 138.25Z" fill="url(#blue)"/>
+        <path d="M970.72 138.25C964.18 165.04 950.12 188.79 927 209.82C903.88 230.84 867.62 261.38 831.97 264.41C796.32 267.44 741.88 241.24 713.1 227.99C684.33 214.74 671.78 204.8 659.33 184.91C646.87 165.02 636.78 140.52 638.37 108.66C639.96 76.79 657.32 21.02 668.84 -6.26C680.37 -33.54 683.76 -43.41 707.52 -55.03C731.28 -66.66 774.48 -83.27 811.39 -76.01C848.31 -68.75 903.21 -32.32 929.02 -11.47C954.83 9.37 959.29 24.09 966.24 49.04C973.19 74 977.26 111.45 970.72 138.25Z" fill="none" stroke="#93C2DE" stroke-width="2" opacity="0.55"/>
+      </g>
+    </g>
+    <g style="mix-blend-mode:screen" opacity="0.74">
+      <g filter="url(#washB)">
+        <path d="M685.33 277.18C678.5 285.03 668.91 288.28 656.78 290.79C644.66 293.3 626.16 298.28 612.58 292.23C598.99 286.18 581.39 267.05 575.28 254.51C569.17 241.96 569.24 230.41 575.91 216.98C582.58 203.54 605.61 181.34 615.31 173.89C625.01 166.45 624.14 170.66 634.11 172.29C644.08 173.92 664.51 171.78 675.12 183.69C685.73 195.59 696.08 228.12 697.78 243.7C699.48 259.28 692.17 269.33 685.33 277.18Z" fill="url(#rose)"/>
+        <path d="M685.33 277.18C678.5 285.03 668.91 288.28 656.78 290.79C644.66 293.3 626.16 298.28 612.58 292.23C598.99 286.18 581.39 267.05 575.28 254.51C569.17 241.96 569.24 230.41 575.91 216.98C582.58 203.54 605.61 181.34 615.31 173.89C625.01 166.45 624.14 170.66 634.11 172.29C644.08 173.92 664.51 171.78 675.12 183.69C685.73 195.59 696.08 228.12 697.78 243.7C699.48 259.28 692.17 269.33 685.33 277.18Z" fill="none" stroke="#C9A4B1" stroke-width="1.8" opacity="0.55"/>
+      </g>
+    </g>
+
+    <g fill="none" stroke="url(#staff)" stroke-width="0.7"><path d="M0 266.5H960"/><path d="M0 275.5H960"/><path d="M0 284.5H960"/><path d="M0 293.5H960"/><path d="M0 302.5H960"/></g>
+
+    <g fill="none" stroke="#97A5B2" stroke-width="0.75" stroke-linejoin="round">
+      <polygon points="425.44,86.05 435.26,129.87 389.71,119.05" opacity="0.5"/>
+      <polygon points="562.69,61.54 560.44,44.25 575.7,47.58" opacity="0.46"/>
+      <polygon points="178.34,67.36 184.61,90.72 163.02,89.24" opacity="0.44"/>
+      <polygon points="300.89,200.55 299.23,207.38 293.13,203.14" opacity="0.42"/>
+      <polygon points="878.68,262.65 902.19,289.22 866.59,300.81" opacity="0.6"/>
+      <path d="M883.18 289.65L878.68 262.65M883.18 289.65L902.19 289.22M883.18 289.65L866.59 300.81" opacity="0.32"/>
+      <polygon points="860.82,99.31 868.48,133.24 836.98,128.18" stroke="#DCE8F0" opacity="0.85"/>
+    </g>
+    <g fill="#97A5B2">
+      <circle cx="352" cy="44" r="0.9" opacity="0.4"/>
+      <circle cx="514" cy="150" r="0.8" opacity="0.34"/>
+      <circle cx="716" cy="322" r="0.9" opacity="0.3"/>
+      <circle cx="262" cy="330" r="0.8" opacity="0.3"/>
+      <circle cx="64" cy="150" r="0.8" opacity="0.3"/>
+    </g>
+
+    <g transform="translate(108 292) rotate(59) scale(1.18)" filter="url(#plume)">
+      <g mask="url(#vaneShape)">
+        <path d="M4 -44C10 -36 13 -18 11.5 0C10.5 12 5 24 -2.4 31C-9 25 -12.5 12 -11.5 -4C-10.5 -22 -3 -38 4 -44Z" fill="url(#vane)" opacity="0.9"/>
+        <path d="M4.11 -40.39L15.39 -54.42M4.11 -40.39L-7.75 -53.93M4.15 -37.77L15.62 -51.64M4.15 -37.77L-7.52 -51.47M4.15 -35.13L15.8 -48.85M4.15 -35.13L-7.34 -48.99M4.12 -32.49L15.94 -46.06M4.12 -32.49L-7.19 -46.49M4.05 -29.84L16.04 -43.26M4.05 -29.84L-7.09 -43.97M3.96 -27.17L16.09 -40.46M3.96 -27.17L-7.03 -41.43M3.83 -24.5L16.11 -37.66M3.83 -24.5L-7 -38.88M3.68 -21.82L16.09 -34.85M3.68 -21.82L-7.01 -36.31M3.49 -19.13L16.03 -32.05M3.49 -19.13L-7.05 -33.72M3.29 -16.44L15.94 -29.24M3.29 -16.44L-7.12 -31.13M3.05 -13.75L15.82 -26.44M3.05 -13.75L-7.23 -28.52M2.8 -11.05L15.67 -23.64M2.8 -11.05L-7.36 -25.91M2.52 -8.35L15.48 -20.84M2.52 -8.35L-7.53 -23.28M2.22 -5.65L15.28 -18.05M2.22 -5.65L-7.72 -20.66M1.91 -2.95L15.04 -15.26M1.91 -2.95L-7.93 -18.02M1.58 -0.25L14.79 -12.48M1.58 -0.25L-8.17 -15.39M1.23 2.44L14.51 -9.71M1.23 2.44L-8.43 -12.75M0.86 5.13L14.21 -6.95M0.86 5.13L-8.72 -10.11M0.49 7.82L13.89 -4.2M0.49 7.82L-9.02 -7.47M0.1 10.5L13.55 -1.46M0.1 10.5L-9.34 -4.83M-0.3 13.17L13.2 1.27M-0.3 13.17L-9.68 -2.19M-0.71 15.84L12.83 3.98M-0.71 15.84L-10.03 0.44M-1.12 18.49L12.46 6.68M-1.12 18.49L-10.4 3.06M-1.55 21.13L12.07 9.36M-1.55 21.13L-10.78 5.68M-1.97 23.77L11.67 12.02M-1.97 23.77L-11.17 8.3M-2.4 26.39L11.26 14.66M-2.4 26.39L-11.57 10.9" fill="none" stroke="#0F141A" stroke-width="0.32" opacity="0.34"/>
+      </g>
+      <path d="M4 -44C5 -20 1 6 -3 30L-6.5 46" fill="none" stroke="#B9DBF0" stroke-width="0.6" stroke-linecap="round" opacity="0.9"/>
+      <path d="M-2.6 30C-6 31 -8.5 33.5 -10 36.5M-2.8 31C-0.5 33 1.5 35.5 2.5 38.5M-3.4 33C-6 35 -7.6 38 -8 41" fill="none" stroke="#7FB2D2" stroke-width="0.5" stroke-linecap="round" opacity="0.8"/>
+    </g>
+
+    <rect width="960" height="360" filter="url(#grain)"/>
+    <rect x="0.5" y="0.5" width="959" height="359" rx="9.5" fill="none" stroke="rgba(240,246,252,0.08)"/>
+  </g>
+</svg>
